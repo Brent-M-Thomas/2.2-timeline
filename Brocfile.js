@@ -1,3 +1,6 @@
-var merge = require('broccoli-merge-trees')
+var merge = require('broccoli-merge-trees');
+var compileSass = require('broccoli-sass');
 
-module.exports = merge(['public', 'bower_components']);
+var appCss = compileSass(['asset', 'bower_components'], 'app.scss', 'app.css');
+
+module.exports = merge(['public', 'bower_components', appCss]);
