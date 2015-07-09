@@ -1,6 +1,7 @@
 @import 'css-reset/reset';
-@import 'fontawesome/css/font-awesome';
-
+@import 'fontawesome/css/font-awesome.css';
+$theme-color-1:  #000080;
+$theme-color-2:  #333333;
 html {
   box-sizing: border-box;
 }
@@ -10,7 +11,7 @@ html {
 
 .timeline {
     list-style-type: none;
-    border-left: 4px solid #000080;
+    border-left: 4px solid $theme-color-1;
     margin-left: 20%;
     padding: 2em;
 }
@@ -18,12 +19,28 @@ html {
     position:relative;
     left:-35%;
 }
+.event div p {
+    color: $theme-color-1;
+    font-size: 1.4em;
+}
+i {
+    zoom: 200%;
+}
+// .event li:nth-of-type(odd) {
+    // background: $theme-color-2:lighten(20%);
+}
+.event div p:first-of-type{
+    font-size: .6em;
+    color: black;
+}
 h1 {
     font-size: 2em;
     font-weight: 400;
     border-bottom: 1px solid;
     padding:0 1em;
     text-align: center;
+    position:relative;
+    top: -2em;
 }
 p {
     padding:0 1em;
@@ -32,11 +49,15 @@ ul {
 }
 li {
     background:#008080;
-    border: 2px solid #333333;
+    border: 2px solid $theme-color-2;
     border-radius: 4px;
     margin-bottom: 1em;
     margin-left: 2em;
     // display:none;
+}
+li>p {
+    position: relative;
+    top:-2em;
 }
 // ul:hover li {
     // display:inline-block;
