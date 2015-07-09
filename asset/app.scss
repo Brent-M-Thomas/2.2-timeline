@@ -26,9 +26,6 @@ html {
 i {
     zoom: 200%;
 }
-// .event li:nth-of-type(odd) {
-    // background: $theme-color-2:lighten(20%);
-}
 .event div p:first-of-type{
     font-size: .6em;
     color: black;
@@ -50,10 +47,13 @@ ul {
 li {
     background:#008080;
     border: 2px solid $theme-color-2;
-    border-radius: 4px;
+    border-radius: 1em;
     margin-bottom: 1em;
     margin-left: 2em;
     // display:none;
+}
+ li:nth-of-type(odd) {
+    background:lighten($theme-color-2, 50%);
 }
 li>p {
     position: relative;
