@@ -1,0 +1,73 @@
+@import 'css-reset/reset';
+@import 'fontawesome/css/font-awesome.css';
+$theme-color-1:  #000080;
+$theme-color-2:  #008080;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.timeline {
+    list-style-type: none;
+    border-left: 4px solid $theme-color-1;
+    margin-left: 7em;
+    padding: 1em;
+    position: relative;
+}
+.event > div {
+    width: 5em;
+    position:absolute;
+    left: -2.6em;
+// percent doesn't work here because it wont' stay lined up on
+// the border at different widths.
+// The percentages are percentages of different things so they
+// don't move at the same rate.
+    background: $theme-color-2;
+    border-radius: 4em;
+    padding:.5em 0;
+}
+.event div p {
+    color: $theme-color-1;
+    font-size: 1.4em;
+text-align: center;}
+i {
+    zoom: 200%;
+    margin-left: .8em;
+}
+.event div p:first-of-type{
+    font-size: .6em;
+    color: white;
+text-align: center;
+}
+h1 {
+    font-size: 2em;
+    font-weight: 400;
+    border-bottom: 1px solid;
+    padding:0 1em;
+    text-align: center;
+    position:relative;
+    // top: -2em;
+}
+ul {
+}
+li {
+    background:#008080;
+    border: 2px solid $theme-color-2;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    // display:none;
+}
+ li:nth-of-type(odd) {
+    background:lighten($theme-color-2, 10%);
+}
+li>p {
+    // position: relative;
+    // top:-2em;
+    padding:0 1em;
+}
+// div:hover li {
+    // display:inline-block;
+//
